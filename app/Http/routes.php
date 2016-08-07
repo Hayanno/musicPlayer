@@ -28,8 +28,6 @@ Route::group(['prefix' => 'api', 'namespace' => 'API'], function () {
     });
 });
 
-
-
 Route::get('login', 'Auth\AuthController@getLogin');
 Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout', 'Auth\AuthController@logout');
@@ -44,40 +42,9 @@ Route::post('password/email', 'Auth\PasswordController@postEmail');
 Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
+// InfyOm Route...
+Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
+Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@fieldTemplate');
+Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
+
 Route::get('/home', 'HomeController@index');
-
-Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
-
-Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@fieldTemplate');
-
-Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
-
-Route::get('generator_builder', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@builder');
-
-Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@fieldTemplate');
-
-Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('tracks', 'tracksController');
-
-Route::resource('artists', 'artistsController');
-
-Route::resource('albums', 'albumsController');
