@@ -23,7 +23,7 @@ return array(
 
     /*
       |--------------------------------------------------------------------------
-      | Relative path to access swagger ui. 
+      | Relative path to access swagger ui.
       |--------------------------------------------------------------------------
     */
     'api-docs-route' => 'api-docs',
