@@ -159,6 +159,7 @@ return [
         InfyOm\AdminLTETemplates\AdminLTETemplatesServiceProvider::class,
         \InfyOm\GeneratorBuilder\GeneratorBuilderServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Jlapp\Swaggervel\SwaggervelServiceProvider::class,
         /*
          * Application Service Providers...
          */
