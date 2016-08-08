@@ -9,3 +9,12 @@
 |
 */
 
+
+
+Route::resource('tracks', 'tracksAPIController');
+
+
+
+Route::resource('albums', 'albumsAPIController');
+
+Route::resource('artists', 'artistsAPIController');

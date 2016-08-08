@@ -48,3 +48,12 @@ Route::get('field_template', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuil
 Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generate');
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::resource('tracks', 'tracksController');
+
+
+
+Route::resource('albums', 'albumsController');
+
+Route::resource('artists', 'artistsController');

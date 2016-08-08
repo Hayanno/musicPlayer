@@ -42,9 +42,9 @@ trait MaketracksTrait
         $fake = Faker::create();
 
         return array_merge([
-            'title' => $fake->word,
+            'file' => $fake->word,
             'art' => $fake->word,
-            'file' => $fake->word
+            'title' => $fake->word
         ], $tracksFields);
     }
 }
