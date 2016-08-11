@@ -217,7 +217,7 @@ class tracksAPIController extends InfyOmBaseController
         $input = $request->all();
 
         /** @var tracks $tracks */
-        $tracks = $this->tracksRepository->find($id);
+        $tracks = $this->tracksRepository->findWithoutFail($id);
 
         if (empty($tracks)) {
             return Response::json(ResponseUtil::makeError('tracks not found'), 404);
@@ -269,7 +269,7 @@ class tracksAPIController extends InfyOmBaseController
     public function destroy($id)
     {
         /** @var tracks $tracks */
-        $tracks = $this->tracksRepository->find($id);
+        $tracks = $this->tracksRepository->findWithoutFail($id);
 
         if (empty($tracks)) {
             return Response::json(ResponseUtil::makeError('tracks not found'), 404);

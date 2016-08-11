@@ -157,7 +157,7 @@ class artistsAPIController extends InfyOmBaseController
     public function show($id)
     {
         /** @var artists $artists */
-        $artists = $this->artistsRepository->find($id);
+        $artists = $this->artistsRepository->findWithoutFail($id);
 
         if (empty($artists)) {
             return Response::json(ResponseUtil::makeError('artists not found'), 404);
@@ -217,7 +217,7 @@ class artistsAPIController extends InfyOmBaseController
         $input = $request->all();
 
         /** @var artists $artists */
-        $artists = $this->artistsRepository->find($id);
+        $artists = $this->artistsRepository->findWithoutFail($id);
 
         if (empty($artists)) {
             return Response::json(ResponseUtil::makeError('artists not found'), 404);
@@ -269,7 +269,7 @@ class artistsAPIController extends InfyOmBaseController
     public function destroy($id)
     {
         /** @var artists $artists */
-        $artists = $this->artistsRepository->find($id);
+        $artists = $this->artistsRepository->findWithoutFail($id);
 
         if (empty($artists)) {
             return Response::json(ResponseUtil::makeError('artists not found'), 404);
