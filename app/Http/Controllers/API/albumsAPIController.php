@@ -157,7 +157,7 @@ class albumsAPIController extends InfyOmBaseController
     public function show($id)
     {
         /** @var albums $albums */
-        $albums = $this->albumsRepository->find($id);
+        $albums = $this->albumsRepository->findWithoutFail($id);
 
         if (empty($albums)) {
             return Response::json(ResponseUtil::makeError('albums not found'), 404);
@@ -217,7 +217,7 @@ class albumsAPIController extends InfyOmBaseController
         $input = $request->all();
 
         /** @var albums $albums */
-        $albums = $this->albumsRepository->find($id);
+        $albums = $this->albumsRepository->findWithoutFail($id);
 
         if (empty($albums)) {
             return Response::json(ResponseUtil::makeError('albums not found'), 404);
@@ -269,7 +269,7 @@ class albumsAPIController extends InfyOmBaseController
     public function destroy($id)
     {
         /** @var albums $albums */
-        $albums = $this->albumsRepository->find($id);
+        $albums = $this->albumsRepository->findWithoutFail($id);
 
         if (empty($albums)) {
             return Response::json(ResponseUtil::makeError('albums not found'), 404);
