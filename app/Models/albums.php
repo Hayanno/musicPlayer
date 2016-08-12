@@ -24,12 +24,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          property="art",
  *          description="art",
  *          type="string"
- *      )
+ *      ),
  *      @SWG\Property(
  *          property="artists",
  *          description="artists",
  *          type="artist"
- *      )
+ *      ),
  *      @SWG\Property(
  *          property="tracks",
  *          description="tracks",
