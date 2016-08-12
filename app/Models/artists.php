@@ -53,4 +53,18 @@ class artists extends Model
     public static $rules = [
         
     ];
+
+    /**
+     * The albums that belong to the artist
+     */
+    public function albums() {
+        return $this->belongsToMany('App\albums');
+    }
+
+    /**
+     * The tracks that belong to the album
+     */
+    public function tracks() {
+        return $this->belongsToMany('App\tracks');
+    }
 }

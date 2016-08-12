@@ -25,6 +25,16 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *          description="art",
  *          type="string"
  *      )
+ *      @SWG\Property(
+ *          property="artists",
+ *          description="artists",
+ *          type="artist"
+ *      )
+ *      @SWG\Property(
+ *          property="tracks",
+ *          description="tracks",
+ *          type="tracks"
+ *      )
  * )
  */
 class albums extends Model
@@ -60,4 +70,18 @@ class albums extends Model
     public static $rules = [
         
     ];
+
+    /**
+     * The artists that belong to the album
+     */
+    public function artists() {
+        return $this->belongsToMany('App\artists');
+    }
+
+    /**
+     * The tracks that belong to the album
+     */
+    public function tracks() {
+        return $this->belongsToMany('App\tracks');
+    }
 }
