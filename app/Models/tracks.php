@@ -72,13 +72,13 @@ class tracks extends Model
      * The albums that belong to the artist
      */
     public function albums() {
-        return $this->belongsToMany('App\albums');
+        return $this->belongsToMany('App\Models\albums');
     }
 
     /**
      * The artists that belong to the album
      */
     public function artists() {
-        return $this->belongsToMany('App\artists');
+        return $this->belongsToMany('App\Models\artists');
     }
 }

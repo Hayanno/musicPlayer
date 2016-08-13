@@ -12,6 +12,8 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
+use \App\Models\tracks;
+
 class tracksController extends InfyOmBaseController
 {
     /** @var  tracksRepository */
@@ -44,7 +46,7 @@ class tracksController extends InfyOmBaseController
      */
     public function create()
     {
-        $artists = tracks::lists('title', 'id');
+        $artists = tracks::pluck('title', 'id');
 
         return view('tracks.create', compact('artists'));
     }
