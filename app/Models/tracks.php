@@ -87,11 +87,11 @@ class tracks extends Model
     }
 
     /**
-     * Get a list of albums ids associated with the current track
+     * Get a list of artists ids associated with the current track
      *
      * @return array
      */
-    public function getAlbumsListAttribute() {
-        return $this->albums->get()->pluck('id')->toArray();
+    public function getArtistsListAttribute() {
+        return $this->artists->get()->pluck('id')->toArray();
     }
 }

@@ -22,3 +22,11 @@
     <p>{!! $tracks->title !!}</p>
 </div>
 
+<!-- Artists Field -->
+<div class="form-group">
+    {!! Form::label('artists', 'Artists:') !!}
+    <ul>
+        @foreach($tracks->artists as $artist)
+            <li>{{ $artist->name }}</li>
+    </ul>
+</div>
