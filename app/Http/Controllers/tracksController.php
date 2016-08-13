@@ -46,7 +46,7 @@ class tracksController extends InfyOmBaseController
      */
     public function create()
     {
-        $artists = artists::pluck('title', 'id');
+        $artists = artists::pluck('name', 'id');
 
         return view('tracks.create', compact('artists'));
     }
