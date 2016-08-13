@@ -18,8 +18,8 @@
 
 <!-- Artists Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('artists', 'Artists:') !!}
-    {!! Form::select('artists[]', $artists, null, ['class' => 'form-control', 'multiple']) !!}
+    {!! Form::label('artists_list', 'Artists:') !!}
+    {!! Form::select('artists_list[]', $artists, null, ['class' => 'form-control', 'multiple']) !!}
 </div>
 
 <!-- Submit Field -->

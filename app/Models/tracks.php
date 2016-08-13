@@ -70,6 +70,8 @@ class tracks extends Model
 
     /**
      * The albums that belong to the artist
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function albums() {
         return $this->belongsToMany('App\Models\albums');
@@ -77,8 +79,19 @@ class tracks extends Model
 
     /**
      * The artists that belong to the album
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function artists() {
         return $this->belongsToMany('App\Models\artists');
+    }
+
+    /**
+     * Get a list of albums ids associated with the current track
+     *
+     * @return array
+     */
+    public function getAlbumsListAttribute() {
+        return $this->albums->get()->pluck('id')->toArray();
     }
 }
