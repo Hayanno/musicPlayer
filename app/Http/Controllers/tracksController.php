@@ -44,7 +44,9 @@ class tracksController extends InfyOmBaseController
      */
     public function create()
     {
-        return view('tracks.create');
+        $artists = tracks::lists('title', 'id');
+
+        return view('tracks.create', compact('artists'));
     }
 
     /**

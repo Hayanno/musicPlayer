@@ -3,7 +3,6 @@
     {!! Form::label('file', 'File:') !!}
     {!! Form::file('file') !!}
 </div>
-<div class="clearfix"></div>
 
 <!-- Art Field -->
 <div class="form-group col-sm-6">
@@ -15,6 +14,12 @@
 <div class="form-group col-sm-6">
     {!! Form::label('title', 'Title:') !!}
     {!! Form::text('title', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Artists Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('artists', 'Artists:') !!}
+    {!! Form::select('artists[]', $artists, null, ['class' => 'form-control', 'multiple']) !!}
 </div>
 
 <!-- Submit Field -->
