@@ -92,6 +92,6 @@ class tracks extends Model
      * @return array
      */
     public function getArtistsListAttribute() {
-        return $this->artists->get()->pluck('id')->toArray();
+        return $this->artists->pluck('id')->all();
     }
 }
