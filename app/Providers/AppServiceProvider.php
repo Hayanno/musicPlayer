@@ -14,9 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('tracks.fields', function($view){
-           $view->with('artists', artists::pluck('name', 'id')->all());
-        });
+        //
     }
 
     /**

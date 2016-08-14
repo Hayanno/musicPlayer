@@ -99,6 +99,7 @@ class tracksController extends InfyOmBaseController
     public function edit($id)
     {
         $tracks = $this->tracksRepository->with('artists')->find($id);
+        $artists = artists::pluck('name', 'id');
 
         if (empty($tracks)) {
             Flash::error('tracks not found');
@@ -106,7 +107,7 @@ class tracksController extends InfyOmBaseController
             return redirect(route('tracks.index'));
         }
 
-        return view('tracks.edit')->with('tracks', $tracks);
+        return view('tracks.edit', compact('tracks', 'artists'));
     }
 
     /**
