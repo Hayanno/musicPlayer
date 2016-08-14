@@ -98,7 +98,7 @@ class tracksController extends InfyOmBaseController
      */
     public function edit($id)
     {
-        $tracks = $this->tracksRepository->findWithoutFail($id);
+        $tracks = $this->tracksRepository->with('artists')->findWithoutFail($id);
 
         if (empty($tracks)) {
             Flash::error('tracks not found');
