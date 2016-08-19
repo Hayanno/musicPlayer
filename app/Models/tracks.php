@@ -45,7 +45,9 @@ class tracks extends Model
     public $fillable = [
         'file',
         'art',
-        'title'
+        'title',
+        'artists',
+        'albums'
     ];
 
     /**
