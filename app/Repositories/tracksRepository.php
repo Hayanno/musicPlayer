@@ -13,7 +13,9 @@ class tracksRepository extends BaseRepository
     protected $fieldSearchable = [
         'file',
         'art',
-        'title'
+        'title',
+        'artists',
+        'albums'
     ];
 
     /**
